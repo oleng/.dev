@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.pyc
 *$py.class
 
 # C extensions
@@ -90,9 +91,11 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Finder files
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
 
 # Rope project settings
 .ropeproject
@@ -102,3 +105,18 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# IntelliJ IDEA IDE
+.idea
+
+# Windows artifacts
+Desktop.ini
+Thumbs.db
+
+# Files that contain credentials or personal info
+.extra
+.boto
+.mrjob.conf
+.s3cfg
+.aws/
+

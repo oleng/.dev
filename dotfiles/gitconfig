@@ -1,16 +1,16 @@
 [user]
-	name = oleng
-	email = oleng@users.noreply.github.com
+    name = oleng
+    email = oleng@users.noreply.github.com
 
 [core]
-	editor = subl -n -w
-	autocrlf = input
-	excludefiles = ~/.gitignore
+    editor = subl -n -w
+    autocrlf = input
+    excludefiles = ~/.gitignore
 
 [color]
-	ui = auto
-	status = auto
-	advice = auto
+    ui = auto
+    status = auto
+    advice = auto
 
 [color "status"]
     added = yellow
@@ -18,9 +18,9 @@
     untracked = cyan
 
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 
 [alias]
-	last = log -1 HEAD
-	undo = reset --soft HEAD^
-	
+    last = log -1 HEAD
+    undo = reset --soft HEAD^
+    

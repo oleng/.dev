@@ -4,7 +4,14 @@ __pycache__/
 *.pyc
 *$py.class
 
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
 # C extensions
+*.o
 *.so
 
 # Distribution / packaging
@@ -92,6 +99,7 @@ env.bak/
 venv.bak/
 
 # Finder files
+.DS_Store?
 .DS_Store
 .Spotlight-V100
 .Trashes
@@ -112,6 +120,7 @@ venv.bak/
 # Windows artifacts
 Desktop.ini
 Thumbs.db
+ehthumbs.db
 
 # Files that contain credentials or personal info
 .extra
@@ -120,6 +129,27 @@ Thumbs.db
 .s3cfg
 .aws/
 
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+logs/
+
 # temporary files
 *.tmp
 tmp/
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+

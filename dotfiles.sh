@@ -2,29 +2,31 @@
 
 ## dotfiles
 
-bash_msg='creating .aliases & .bash_profile...'
+bash_msg='creating .bash_profile, .bashrc & .aliases...'
 git_cfg_msg='creating .gitignore & .gitconfig...'
-ssh_msg='creating ssh config...'
+ssh_msg='copying ssh config...'
 
-bashdots=''
+dotfiles=''
 
 header () {
 	echo "-> $1 "
 }
 
 header "$bash_msg"
-printf '
-cp -v dotfiles/aliases ~/.aliases
 cp -v dotfiles/bash_profile ~/.bash_profile
+cp -v dotfiles/bashrc ~/.bashrc
+cp -v dotfiles/aliases ~/.aliases
+# TODO: transfer secret keys from vault
+touch ~/.secrets
 source ~/.bash_profile
-'
+
+
 header "$git_cfg_msg"
-printf '
 cp -v dotfiles/gitignore ~/.gitignore
 cp -v dotfiles/gitconfig ~/.gitconfig
-'
+
 
 header "$ssh_msg"
-printf 'cp .ssh ~/.ssh'
+cp .ssh ~/.ssh'
 
 exit 0

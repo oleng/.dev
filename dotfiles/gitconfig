@@ -9,8 +9,11 @@
 
 [color]
     ui = auto
-    status = auto
     advice = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    pager = true
 
 [color "status"]
     added = yellow
@@ -23,4 +26,3 @@
 [alias]
     last = log -1 HEAD
     undo = reset --soft HEAD^
-    

@@ -4,7 +4,11 @@ Stolen & borrowed shamelessly from many, mostly [herrbischoff/awesome-macos-comm
 
 This (hopefully) organic repo is for automating development setups on new installs (or resetting to default configurations & environments), including dotfiles.
 
-[//]: # (if inside a folder there's a folder doesn't need its folder listed, prefix the names of the folders in the same level with a slash, otherwise leave the slash out)
+[//]: # (
+	guide:
+	- if inside a folder there's a subfolder that doesn't need its content listed, prefix all the names of subfolders in the same level with a slash, otherwise leave the slash out.
+	- add whitespace between root folders & files, but after first child sublevel avoid whitespace.
+	)
 
 	├─── dotfiles
 	│   ├── .docker
@@ -13,8 +17,9 @@ This (hopefully) organic repo is for automating development setups on new instal
 	│   │   ├── /hooks
 	│   │   ├── /info
 	│   │   │  └── exclude
-	│   │   └── description
-	│   │
+	│   │   ├── description
+	│   ├── .ssh
+	│   │   └── config
 	│   ├── .aliases
 	│   ├── .bash_profile
 	│   ├── .bashrc
@@ -24,10 +29,7 @@ This (hopefully) organic repo is for automating development setups on new instal
 	│   │
 	├─── install_cfg
 	│   ├── brew_packages.conf
-	│   ├── Preference.sublime-settings
-	│   │
-	├─── .ssh
-	│   └── config
+	│   └── Preference.sublime-settings
 	│  
 	├── brew_install_packages.sh
 	├── dotfiles.sh

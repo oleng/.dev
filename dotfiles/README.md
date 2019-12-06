@@ -20,7 +20,7 @@ In term of importance the whole execution chain for shell(s) in macOS can be vie
 					/etc/profile
 						|
 						|
-				~/.bash_profile
+					~/.bash_profile
 						|
 						|
 			.secrets <--   ~/.bashrc   --> ~/.aliases

@@ -7,6 +7,8 @@ This (hopefully) organic repo is for automating development setups on new instal
 [//]: # (if inside a folder there's a folder doesn't need its folder listed, prefix the names of the folders in the same level with a slash, otherwise leave the slash out)
 
 	├─── dotfiles
+	│   ├── .docker
+	│   │  └── config.json
 	│   ├── .git_template
 	│   │   ├── /hooks
 	│   │   ├── /info
@@ -21,8 +23,6 @@ This (hopefully) organic repo is for automating development setups on new instal
 	│   ├── tmux.conf
 	│   │
 	├─── install_cfg
-	│   ├── .docker
-	│   │  └── config.json
 	│   ├── brew_packages.conf
 	│   ├── Preference.sublime-settings
 	│   │

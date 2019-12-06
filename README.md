@@ -8,7 +8,7 @@ This (hopefully) organic repo is for automating development setups on new instal
 
 	├─── dotfiles
 	│   ├── .docker
-	│   │  └── config.json
+	│   │  	└── config.json
 	│   ├── .git_template
 	│   │   ├── /hooks
 	│   │   ├── /info

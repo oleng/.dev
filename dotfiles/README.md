@@ -23,7 +23,7 @@ In term of importance the whole execution chain for shell(s) in macOS can be vie
 				~/.bash_profile
 						|
 						|
-		.secrets <--   ~/.bashrc   --> ~/.aliases
+				.secrets <--   ~/.bashrc   --> ~/.aliases
 
 
 ---

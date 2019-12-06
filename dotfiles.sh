@@ -2,8 +2,8 @@
 
 ## dotfiles
 
-bash_msg='creating .bash_profile, .bashrc & .aliases...'
-git_cfg_msg='creating .gitignore & .gitconfig...'
+bash_msg='ing .bash_profile, .bashrc & .aliases...'
+git_cfg_msg='creating folder .git_templates, .gitignore & .gitconfig...'
 ssh_msg='copying ssh config...'
 
 dotfiles=''
@@ -13,20 +13,16 @@ header () {
 }
 
 header "$bash_msg"
-cp -v dotfiles/bash_profile ~/.bash_profile
-cp -v dotfiles/bashrc ~/.bashrc
-cp -v dotfiles/aliases ~/.aliases
+cp -v dotfiles/.bash* ~/
+cp -v dotfiles/.aliases ~/
 # TODO: transfer secret keys from vault
 touch ~/.secrets
+
 source ~/.bash_profile
 
 
 header "$git_cfg_msg"
-cp -v dotfiles/gitignore ~/.gitignore
-cp -v dotfiles/gitconfig ~/.gitconfig
-
+cp -vRf dotfiles/.git* ~/
 
 header "$ssh_msg"
 cp .ssh ~/.ssh'
-
-exit 0

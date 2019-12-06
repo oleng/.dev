@@ -11,6 +11,7 @@ chmod_msg='Changing permissions for .sh files to +x...'
 osx_cfg_msg='Setting up macOS default settings...'
 dotfiles_msg='Creating dotfiles in home folder...'
 brewinstall_msg='Installing brew...'
+cli_tools_msg='Installing cli tools...'
 
 header () {
 	echo "
@@ -19,6 +20,7 @@ $sep
 "
 }
 
+# Start
 echo "$sep"
 echo "$(date), macOS version: $(sw_vers -productVersion)"
 
@@ -53,6 +55,9 @@ header "$osx_cfg_msg"
 header "$dotfiles_msg"
 ./dotfiles.sh
 
+## cli tools
+## header "$cli_tools_msg"
+##
 
 ## install brew package manager
 header "$brewinstall_msg"
@@ -68,9 +73,9 @@ header "Setup finished. Exiting."
 exit 0
 
 
-# Enable find my mac with defaults (Warning ABSOLUTE PATH ONLY): 
+# Enable find my mac with defaults (Warning ABSOLUTE PATH ONLY):
 #	defaults [-currentHost | -host hostname] write domain { 'plist' | key 'value' }
 
-# breaks the defaults read 
+# breaks the defaults read
 # defaults write /System/Library/LaunchDaemons/com.apple.findmymac.plist MachServices '{"com.apple.findmymacd" =0;}'
 

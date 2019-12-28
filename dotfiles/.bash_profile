@@ -15,18 +15,29 @@ export HISTFILESIZE=100000000
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
 
-###     P Y T H O N      ###
+##  homebrew
+
+export HOMEBREW_NO_ANALYTICS=1
+
+
+##  docker
+
+export DOCKER_BUILDKIT=1 # or configure in daemon.json
+export COMPOSE_DOCKER_CLI_BUILD=1
+
+
+##  python
 
 # Python disable .pyc
 export PYTHONDONTWRITEBYTECODE=1
+
 # pip virtualenv
 export PIP_RESPECT_VIRTUALENV=true
 
 
-###     F O R M A T T I N G      ###
+##  formatting
 
 ## ! default formatting is stored as $PS1='\h:\W \u\$ ' in /etc/bashrc
-
 ## old: blue prompt, light grey text >> \[\e[0m\] for white, \[\e[37m\] for light grey
 # PS1="\[\e[34m\]> \D{%H:%M:%S} \h:\W \$\[\e[0m\] "
 
@@ -140,6 +151,7 @@ export CLICOLOR=1
 
 export LSCOLORS=Gxhxcxdxgxegfhbxfxacad
 export GREP_OPTIONS='--color=auto'
+
 
 # source .bashrc is exists
 if [ -f ~/.bashrc ]; then

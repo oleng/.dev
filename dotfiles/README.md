@@ -19,13 +19,13 @@ So keeping some settings apart or making them less inaccessible by _any_ applica
 
 In term of importance the whole execution chain for shell(s) in macOS can be viewed like this:
 
-					/etc/profile
-						|
-						|
-					~/.bash_profile
-						|
-						|
-			.secrets <--   ~/.bashrc   --> ~/.aliases
+                /etc/profile
+                    |
+                    |
+            ~/.bash_profile
+                    |
+                    |
+    .secrets <--  ~/.bashrc
 
 
 ---

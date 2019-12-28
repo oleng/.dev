@@ -3,7 +3,7 @@
 This folder contains the dot files in `~/` (home folder).
 
 `.bash_profile` is by default executed for interactive login shells before the initial command prompt.[¹](#1) So macOS computers have `.bash_profile` for each account, and/or other `.*profile` file for each shell. There is also a `profile` file that configures every instances of shell, this system wide profile file is in `/etc/profile`.
-`.bashrc` on the other hand is for non-interactive login shell, so if you're using it you have to source it to run it.[²](#2)
+`.bashrc` on the other hand is for non-interactive login shell, so if you're using it you have to source it to run it.[²](#2). Note: good rule of thumb is to leave system wide configs alone when making personalizations because they might get reset/overwritten on OS updates, but user profile/home folders (usually) carries over between updates as the update explicitly avoid touching them.
 
 On macOS, Terminal by default runs a login shell every time so `.bash_profile` is executed for every window/instances[¹](#1). This is convenient, but at the same time is also confusing, it can even be a failure/security weakness point.
 

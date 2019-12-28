@@ -20,7 +20,6 @@ This (hopefully) organic repo is for automating development setups on new instal
 	│   │   ├── description
 	│   ├── .ssh
 	│   │   └── config
-	│   ├── .aliases
 	│   ├── .bash_profile
 	│   ├── .bashrc
 	│   ├── .gitconfig

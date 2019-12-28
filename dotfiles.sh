@@ -2,27 +2,27 @@
 
 ## dotfiles
 
-bash_msg='ing .bash_profile, .bashrc & .aliases...'
+bash_msg='copying .bash_profile, .bashrc & .aliases...'
 git_cfg_msg='creating folder .git_templates, .gitignore & .gitconfig...'
 ssh_msg='copying ssh config...'
-
-dotfiles=''
 
 header () {
 	echo "-> $1 "
 }
 
+## start exec
+
 header "$bash_msg"
 cp -v dotfiles/.bash* ~/
-cp -v dotfiles/.aliases ~/
 # TODO: transfer secret keys from vault
 touch ~/.secrets
-
-source ~/.bash_profile
-
 
 header "$git_cfg_msg"
 cp -vRf dotfiles/.git* ~/
 
 header "$ssh_msg"
-cp .ssh ~/.ssh'
+cp .ssh ~/
+
+
+header 'Sourcing .bash_profile to finish setup.'
+source ~/.bash_profile

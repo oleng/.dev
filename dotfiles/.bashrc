@@ -3,6 +3,7 @@
 if [ -f ~/.inputrc ]; then
     echo "Initializing ~/.inputrc..."
     bind -v -f ~/.inputrc
+    clear
 fi
 
 # initialize secrets
@@ -13,7 +14,7 @@ fi
 
 ##  aliases
 
-## Everyday tools
+## Dev tools
 alias ls="ls -GF"
 alias less="less -r"
 alias which="type -f"
@@ -24,6 +25,13 @@ alias pip=pip3
 alias iterm=/Application/iTerm.app
 alias editxt="subl -n"
 alias txt="subl -n"
+# remove just dangling images
+alias docker-dangling-images="docker rmi $(docker images --filter dangling=true)"
+# remove every stopped containers
+alias docker-stopped-containers="docker rm $(docker ps -a -q -f status=exited)"
+# remove every stopped containers, all networks not used by at least one container,
+# all dangling images & dangling build caches
+alias dockerprune="docker system prune"
 
 function fname_ext() {
     filename=$(basename -- "$1")

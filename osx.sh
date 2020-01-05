@@ -43,7 +43,7 @@ chflags nohidden ~/Library
 # defaults write com.apple.finder AppleShowAllFiles false
 defaults write com.apple.finder AppleShowAllFiles true
 
-## Show full path on windows title 
+## Show full path on windows title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 ## Expand Save Panel by Default
@@ -68,3 +68,6 @@ defaults write 'Apple Global Domain' AppleMetricUnits -bool true
 
 ## Copy SF Mono fonts (pre Sierra)
 # cp -v /Applications/Xcode-beta.app/Contents/SharedFrameworks/DVTKit.framework/Versions/A/Resources/Fonts/SFMono-* ~/Library/Fonts
+
+## Use Plain Text Mode as Default
+defaults write com.apple.TextEdit RichText -int 0

@@ -129,6 +129,8 @@ ehthumbs.db
 .s3cfg
 .aws/
 .secrets
+keys/
+id_rsa*
 
 # Logs and databases #
 ######################

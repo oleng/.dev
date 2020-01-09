@@ -107,6 +107,7 @@ export PS1="> \t \h:\[\033[01;32m\]\W \[\033[1;37m\]\$\[\033[00m\] "
 
 #  The default order & value for CLICOLOR
 export CLICOLOR=1
+export CLICOLOR_FORCE=1
 
 # ls attribute                  Foreground  Background
 # ----------------------------------------------------

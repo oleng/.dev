@@ -378,7 +378,7 @@ support.other
     <key>settings</key>
     <dict>
         <key>fontStyle</key><string></string>
-        <key>foreground</key><string>#6defa9</string>
+        <key>foreground</key><string>#6fd9ef</string>
         <!-- <key>foreground</key><string>#66dfff</string> -->
     </dict>
 </dict>

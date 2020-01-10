@@ -31,7 +31,7 @@ mochano
 <plist version="1.0">
 <dict>
 <key>name</key>
-<string>mochano (based on Mars Peacock)</string>
+<string>mochano v.0.1 (based on Mars Peacock)</string>
 <key>settings</key>
 <array>
 
@@ -40,14 +40,14 @@ mochano
 <dict>
     <key>settings</key>
     <dict>
-        <key>foreground</key><string>#EDE7CB</string>
-        <key>background</key><string>#2e2b2a</string>
+        <key>foreground</key><string>#f1eacd</string>
+        <key>background</key><string>#2d2928</string>
 
-        <key>caret</key><string>#EDE7CB</string>
-        <key>lineHighlight</key><string>#1E1B18</string>
+        <key>caret</key><string>#ede7cb</string>
+        <key>lineHighlight</key><string>#1c1815</string>
 
-        <key>selection</key><string>#47392c</string>
-        <key>selectionBorder</key><string>#52433380</string>
+        <key>selection</key><string>#3a2c1f</string>
+        <key>selectionBorder</key><string>#50413180</string>
 
         <key>findHighlight</key><string>#FFE792</string>
         <key>findHighlightForeground</key><string>#000000</string>
@@ -63,7 +63,7 @@ mochano
         <key>bracketContentsForeground</key><string>#F8F8F2A5</string>
         <key>bracketContentsOptions</key><string>underline</string>
 
-        <key>gutter</key><string>#292827</string>
+        <key>gutter</key><string>#292625</string>
         <!-- foreground: line numbers
         <key>gutterForeground</key><string>#2e2b2a</string>
         -->
@@ -177,7 +177,7 @@ keyword.other
     <key>scope</key><string>keyword</string>
     <key>settings</key>
     <dict>
-        <key>foreground</key><string>#269FD9</string>
+        <key>foreground</key><string>#39b2ec</string>
     </dict>
 </dict>
 
@@ -214,7 +214,7 @@ storage.modifier:       static, final, abstract
     <key>scope</key><string>storage</string>
     <key>settings</key>
     <dict>
-        <key>foreground</key><string>#26b5a3</string>
+        <key>foreground</key><string>#27b6a4</string>
     </dict>
 </dict>
 <dict>
@@ -260,7 +260,7 @@ variable.other:         $x
     <key>scope</key><string>variable.language</string>
     <key>settings</key>
     <dict>
-        <key>foreground</key><string>#fd4040</string>
+        <key>foreground</key><string>#27b6a4</string>
     </dict>
 </dict>
 
@@ -372,6 +372,7 @@ support.other
         <key>foreground</key><string>#6fd9ef</string>
     </dict>
 </dict>
+<!--    Python builtin functions -->
 <dict>
     <key>name</key><string>Library class/type</string>
     <key>scope</key><string>support.type, support.class, support.function.builtin.python</string>
@@ -379,6 +380,8 @@ support.other
     <dict>
         <key>fontStyle</key><string></string>
         <key>foreground</key><string>#6fd9ef</string>
+        <!--    alt color: darker & paler -->
+        <!-- <key>foreground</key><string>#9be0dd</string> -->
         <!-- <key>foreground</key><string>#66dfff</string> -->
     </dict>
 </dict>

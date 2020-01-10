@@ -41,7 +41,7 @@ mochano
     <key>settings</key>
     <dict>
         <key>foreground</key><string>#f1eacd</string>
-        <key>background</key><string>#2d2928</string>
+        <key>background</key><string>#2d2a29</string>
 
         <key>caret</key><string>#ede7cb</string>
         <key>lineHighlight</key><string>#1c1815</string>
@@ -63,7 +63,7 @@ mochano
         <key>bracketContentsForeground</key><string>#F8F8F2A5</string>
         <key>bracketContentsOptions</key><string>underline</string>
 
-        <key>gutter</key><string>#292625</string>
+        <key>gutter</key><string>#2b2827</string>
         <!-- foreground: line numbers
         <key>gutterForeground</key><string>#2e2b2a</string>
         -->

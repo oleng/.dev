@@ -21,7 +21,7 @@ alias which="type -f"
 alias tmux="tmux -2"
 alias git="/usr/local/bin/git"
 alias python=python3
-alias pip=pip3
+alias pip="python3 -m pip"
 alias iterm=/Application/iTerm.app
 alias editxt="subl -n"
 alias txt="subl -n"
@@ -32,27 +32,6 @@ alias docker-stopped-containers="docker rm $(docker ps -a -q -f status=exited)"
 # remove every stopped containers, all networks not used by at least one container,
 # all dangling images & dangling build caches
 alias dockerprune="docker system prune"
-
-function fname_ext() {
-    filename=$(basename -- "$1")
-    extension=$([[ "$filename" = *.* ]] && echo ".${filename##*.}" || echo '')
-    echo "filename: $filename"
-    echo "ext: $extension"
-}
-
-function jsonbeautify() {
-    while [ "$1" != "" ];
-        do
-            fname=$1
-            # create a temporary beautified .json file
-            result="${fname/.json/.json.tmp}"
-            jq . "$fname" > "$result"
-            rm "$fname" && mv "$result" "$fname"
-            echo "$fname"
-        shift
-    done
-}
-
 
 ## Operating system related
 alias badblocks=/usr/local/opt/e2fsprogs/sbin/badblocks
@@ -82,4 +61,27 @@ function yt-pl_index() {
     done
 }
 
+
+function fname_ext() {
+    filename=$(basename -- "$1")
+    extension=$([[ "$filename" = *.* ]] && echo ".${filename##*.}" || echo '')
+    echo "filename: $filename"
+    echo "ext: $extension"
+}
+
+function jsonbeautify() {
+    while [ "$1" != "" ];
+        do
+            fname=$1
+            # create a temporary beautified .json file
+            result="${fname/.json/.json.tmp}"
+            jq . "$fname" > "$result"
+            rm "$fname" && mv "$result" "$fname"
+            echo "$fname"
+        shift
+    done
+}
+
 ## project related
+
+alias proxy="proxybroker --verify-ssl --log DEBUG find --types HTTPS --lvl High --show-stat --strict --countries US UM VI CA HT JM PR NL DK NO PL DE FR UK --format json --outfile proxies/$(date +%Y%m%d_%H)_proxies.json"

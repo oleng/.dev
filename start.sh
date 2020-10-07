@@ -18,7 +18,7 @@ dotfiles_msg='Creating dotfiles in home folder...'
 brewinstall_msg='Installing brew...'
 cli_tools_msg='Installing cli tools...'
 
-header () {
+printheader() {
 	echo "
 $sep
 : $1 $2
@@ -29,7 +29,7 @@ $sep
 echo "$sep"
 echo "$(date), macOS version: $(sw_vers -productVersion)"
 
-header "$osupdate_msg"
+printheader "$osupdate_msg"
 
 ## Ask for the administrator password upfront
 sudo -v
@@ -41,7 +41,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo softwareupdate --install --recommended --restart --verbose
 
 ## and install Xcode tools
-header "$xcode_msg"
+printheader "$xcode_msg"
 xcode-select --install
 
 # TODO: evaluate the best sequence/strategy since brew install affects dotfiles
@@ -50,7 +50,7 @@ xcode-select --install
 # if so either merge the diff'd lines or copy as new file with .default extension
 
 ## cli tools
-## header "$cli_tools_msg"
+## printheader "$cli_tools_msg"
 ##
 
 ## install from brew
@@ -58,28 +58,28 @@ xcode-select --install
 ./brew_install_packages.sh
 
 ## clone .dev repo
-header "$gitclone_msg"
+printheader "$gitclone_msg"
 git clone https://github.com/oleng/.dev.git && cd .dev
 
-header "$chmod_msg"
+printheader "$chmod_msg"
 chmod -R +x *.sh
 
 ## dotfiles
-header "$dotfiles_msg"
+printheader "$dotfiles_msg"
 ./dotfiles.sh
 
 ## install brew package manager
-header "$brewinstall_msg"
+printheader "$brewinstall_msg"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 
 ## start setting os
-header "$osx_cfg_msg"
+printheader "$osx_cfg_msg"
 ./osx.sh
 
 
 ## Done
-header "Setup finished. Exiting."
+printheader "Setup finished. Exiting."
 exit 0
 
 

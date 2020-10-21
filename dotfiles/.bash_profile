@@ -36,6 +36,11 @@ export PYTHONDONTWRITEBYTECODE=1
 # pip virtualenv
 export PIP_RESPECT_VIRTUALENV=true
 
+# python 3.4+, asyncio dev debug mode
+export PYTHONASYNCIODEBUG=1
+
+# python 3.4+, https://docs.python.org/3/using/cmdline.html#envvar-PYTHONTRACEMALLOC
+export PYTHONTRACEMALLOC=1
 
 ##  formatting
 

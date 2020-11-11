@@ -14,13 +14,15 @@ printheader() {
 
 printheader "$bash_msg"
 
-ln -s $(pwd)/.bash_profile ~/.bash_profile
-ln -s $(pwd)/.bashrc ~/.bashrc
+# create symlink from dotfiles/.bash*
+ln -s $(pwd)/dotfiles/.bash_profile ~/.bash_profile
+ln -s $(pwd)/dotfiles/.bashrc ~/.bashrc
+
 # TODO: transfer secret keys from vault
 # touch ~/.secrets
 
 printheader "$git_cfg_msg"
-cp -vRf dotfiles/.git* ~/
+cp -vRf $(pwd)/dotfiles/.git* ~/
 
 printheader "$ssh_msg"
 cp .ssh ~/

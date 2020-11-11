@@ -16,14 +16,12 @@ export HISTFILESIZE=100000000
 
 
 ##  homebrew
-
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_GITHUB_API=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 ##  docker
-
 export DOCKER_BUILDKIT=1 # or configure in daemon.json
 export COMPOSE_DOCKER_CLI_BUILD=1
 
@@ -36,11 +34,10 @@ export PYTHONDONTWRITEBYTECODE=1
 # pip virtualenv
 export PIP_RESPECT_VIRTUALENV=true
 
-# python 3.4+, asyncio dev debug mode
-export PYTHONASYNCIODEBUG=1
-
+# python 3.4+, for asyncio dev debug mode
+# export PYTHONASYNCIODEBUG=1
 # python 3.4+, https://docs.python.org/3/using/cmdline.html#envvar-PYTHONTRACEMALLOC
-export PYTHONTRACEMALLOC=1
+# export PYTHONTRACEMALLOC=1
 
 ##  formatting
 

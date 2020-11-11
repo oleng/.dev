@@ -12,6 +12,20 @@ if [ -f ~/.secrets ]; then
     source ~/.secrets;
 fi
 
+# check if `python` symlink exists
+# if `test` can't find symlink for `python` in `/usr/local/bin` then create one
+if [ ! -L "/usr/local/bin/python" ]; then
+    SOURCE_SYMLINK=/usr/local/bin/python3
+    SYMLINKED_PYTHON=/usr/local/bin/python
+
+    # parameters: source_file target_file
+    ln -s $SOURCE_SYMLINK $SYMLINKED_PYTHON
+    
+    echo "Created symlink at $SYMLINKED_PYTHON to python at:"
+    echo $(readlink $SYMLINKED_PYTHON)
+
+fi
+
 ##  aliases
 
 ## Dev tools

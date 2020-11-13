@@ -22,7 +22,11 @@ ln -s $(pwd)/dotfiles/.bashrc ~/.bashrc
 # touch ~/.secrets
 
 printheader "$git_cfg_msg"
-cp -vRf $(pwd)/dotfiles/.git* ~/
+# cp -vRf $(pwd)/dotfiles/.git* ~/
+# symlink instead
+ln -s $(pwd)/dotfiles/.git_templates ~/.git_templates
+ln -s $(pwd)/dotfiles/.gitconfig ~/.gitconfig
+ln -s $(pwd)/dotfiles/.gitignore ~/.gitignore
 
 printheader "$ssh_msg"
 cp .ssh ~/

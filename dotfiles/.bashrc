@@ -20,7 +20,7 @@ if [ ! -L "/usr/local/bin/python" ]; then
 
     # parameters: source_file target_file
     ln -s $SOURCE_SYMLINK $SYMLINKED_PYTHON
-    
+
     echo "Created symlink at $SYMLINKED_PYTHON to python at:"
     echo $(readlink $SYMLINKED_PYTHON)
 
@@ -35,7 +35,6 @@ alias which="type -f"
 alias tmux="tmux -2"
 alias git="/usr/local/bin/git"
 alias python=python3
-alias pip="python3 -m pip"
 alias iterm=/Application/iTerm.app
 alias editxt="subl -n"
 alias txt="subl -n"

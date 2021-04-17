@@ -4,6 +4,8 @@ Stolen & borrowed shamelessly from many, mostly [herrbischoff/awesome-macos-comm
 
 This (hopefully) organic repo is for automating development setups on new installs (or resetting to default configurations & environments), including dotfiles.
 
+_Warning_: mainly for `bash` in macOS, so you need to adjust some if you want to use this in `zsh` or Linux distros.
+
 [//]: # (
 	guide:
 	- if inside a folder there's a subfolder that doesn't need its content listed, prefix all the names of subfolders in the same level with a slash, otherwise leave the slash out.

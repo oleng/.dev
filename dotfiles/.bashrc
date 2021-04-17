@@ -26,6 +26,11 @@ if [ ! -L "/usr/local/bin/python" ]; then
     echo $(readlink $SYMLINKED_PYTHON)
 fi
 
+# check if curl is installed & not symlinked in local bin 
+if [[ -e "/usr/local/opt/curl/bin/curl" && ! -L "/usr/local/bin/curl" ]]; then
+    ln -s /usr/local/opt/curl/bin/curl /usr/local/bin/curl
+fi
+
 # https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395
 # https://stackoverflow.com/a/1885670
 

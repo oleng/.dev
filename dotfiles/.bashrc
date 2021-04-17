@@ -1,15 +1,16 @@
 
 # initialize shell input configs
 if [ -f ~/.inputrc ]; then
-    echo "Initializing ~/.inputrc..."
+    printf "Initializing ~/.inputrc..."
     bind -v -f ~/.inputrc
     clear
 fi
 
 # initialize secrets
 if [ -f ~/.secrets ]; then
-    echo "Sourcing ~/.secrets..."
-    source ~/.secrets;
+    printf "Sourcing ~/.secrets..."
+    source ~/.secrets
+    clear
 fi
 
 # check if `python` symlink exists
@@ -21,10 +22,13 @@ if [ ! -L "/usr/local/bin/python" ]; then
     # parameters: source_file target_file
     ln -s $SOURCE_SYMLINK $SYMLINKED_PYTHON
 
-    echo "Created symlink at $SYMLINKED_PYTHON to python at:"
+    printf "Created symlink at $SYMLINKED_PYTHON to python at:"
     echo $(readlink $SYMLINKED_PYTHON)
-
 fi
+
+# https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395
+# https://stackoverflow.com/a/1885670
+
 
 ##  aliases
 
@@ -34,14 +38,34 @@ alias less="less -r"
 alias which="type -f"
 alias tmux="tmux -2"
 alias git="/usr/local/bin/git"
-alias python=python3
+alias python="python3"
+alias pip="python3 -m pip"
+# create new venv with command prompt on
+function mkvenv() {
+    read -p "This will create new venv in this directory & activate it. Continue [y/n]? " confirm
+    if [ $confirm = 'y' ]; then
+        if [[ -d "$(pwd)/.venv" && -e "$(pwd)/.venv/bin/activate" ]]; then
+            printf '.venv already exists.'
+        else
+            _pyversion="$(python -V)"
+            echo "Creating new venv with ${_pyversion}..."
+            python -m venv .venv --prompt $(basename $(pwd))
+        fi
+        echo "activating $(basename $(pwd))..."
+        source .venv/bin/activate
+    else
+        printf 'Aborted venv creation.'
+    fi
+}
+
 alias iterm=/Application/iTerm.app
-alias editxt="subl -n"
-alias txt="subl -n"
+alias editxt="code"
+alias txt="code"
+
 # remove just dangling images
-alias docker-dangling-images="docker rmi $(docker images --filter dangling=true)"
+alias docker_rm-dangling-images="docker rmi $(docker images --filter dangling=true)"
 # remove every stopped containers
-alias docker-stopped-containers="docker rm $(docker ps -a -q -f status=exited)"
+alias docker_rm-stopped-containers="docker rm $(docker ps -a -q -f status=exited)"
 # remove every stopped containers, all networks not used by at least one container,
 # all dangling images & dangling build caches
 alias dockerprune="docker system prune"

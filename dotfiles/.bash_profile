@@ -1,4 +1,7 @@
-export PATH=/usr/local/bin:/usr/local/Cellar:$PATH
+# Set default & sane path although can't find an elegant way to remove /usr/local/bin line from /etc/paths
+# so we can move it to first in paths order
+_DEFAULTPATH=$(echo $(cat /etc/paths) | tr ' ' ':')
+export PATH="/usr/local/bin:/usr/local/Cellar:$_DEFAULTPATH"
 
 # Set architecture flags to explicitly set 64-bit for compiling.
 export ARCHFLAGS="-arch x86_64"

@@ -124,6 +124,16 @@ venv.bak/
 # IntelliJ IDEA IDE
 .idea
 
+# VisualStudioCode IDE
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+# VisualStudioCode: Ignore all local history of files
+.history
+.ionide
+
 # Windows artifacts
 Desktop.ini
 Thumbs.db
@@ -135,6 +145,8 @@ ehthumbs.db
 .mrjob.conf
 .s3cfg
 .aws/
+*keys/
+id_rsa*
 .secrets
 
 # temporary files

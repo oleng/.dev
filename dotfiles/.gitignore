@@ -128,9 +128,9 @@ ehthumbs.db
 .mrjob.conf
 .s3cfg
 .aws/
-.secrets
 keys/
 id_rsa*
+.secrets
 
 # Logs and databases #
 ######################

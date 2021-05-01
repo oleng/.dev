@@ -1,5 +1,5 @@
-# Set default & sane path although can't find an elegant way to remove /usr/local/bin line from /etc/paths
-# so we can move it to first in paths order
+# Set default & sane path although can't find an elegant way to remove /usr/local/bin line 
+# from /etc/paths so we can move it to first in paths order
 _DEFAULTPATH=$(echo $(cat /etc/paths) | tr ' ' ':')
 export PATH="/usr/local/bin:/usr/local/Cellar:$_DEFAULTPATH"
 
@@ -31,8 +31,8 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 
 ##  python
 
-# Python disable .pyc
-export PYTHONDONTWRITEBYTECODE=1
+# Uncomment to disable Python .pyc
+# export PYTHONDONTWRITEBYTECODE=1
 
 # pip virtualenv
 export PIP_RESPECT_VIRTUALENV=true

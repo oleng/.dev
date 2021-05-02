@@ -49,6 +49,7 @@ export PIP_RESPECT_VIRTUALENV=true
 # PS1="\[\e[34m\]> \D{%H:%M:%S} \h:\W \$\[\e[0m\] "
 
 ## Formatting info:
+# https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html
 # (incomplete) https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
 # https://wiki.archlinux.org/index.php/Bash/Prompt_customization
 # https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
@@ -110,7 +111,7 @@ export PIP_RESPECT_VIRTUALENV=true
 #     Hidden Text:          8
 
 # TODO: create script to toggle between different formats that's useful for scenarios like SSH
-export PS1="> \t \h:\[\033[01;32m\]\W \[\033[1;37m\]\$\[\033[00m\] "
+export PS1="> \t \h:\[\033[01;32m\]\w \[\033[1;37m\]\$\[\033[00m\] "
 
 #  The default order & value for CLICOLOR
 export CLICOLOR=1

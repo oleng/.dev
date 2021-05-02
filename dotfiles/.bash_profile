@@ -113,6 +113,47 @@ export PIP_RESPECT_VIRTUALENV=true
 # TODO: create script to toggle between different formats that's useful for scenarios like SSH
 export PS1="> \t \h:\[\033[01;32m\]\w \[\033[1;37m\]\$\[\033[00m\] "
 
+# To use python's powerline-shell for PS1 instead (unrelated to original powerline)
+# https://github.com/b-ryan/powerline-shell
+
+# | venv > 23:53:13 > host > current_path/basename > master > ? > $ 
+
+# Need patched font for displaying git/version-control symbols in prompt 
+# search for sf-mono-powerline
+
+# function _ps1() {
+#     PS1=$(powerline-shell $?)
+# }
+
+# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _ps1 ]]; then
+#     PROMPT_COMMAND="_ps1; $PROMPT_COMMAND"
+# fi
+
+# config for powerline-shell (path ~/.config/powerline-shell/config.json)
+# {
+#     "segments": [
+#         "virtual_env",
+#         "time",
+#         "hostname",
+#         "ssh",
+#         "cwd",
+#         "git",
+#         "hg",
+#         "jobs",
+#         "root"
+#     ],
+#     "time": {
+#         "format": "%X"
+#     },
+#     "hostname": {
+#         "colorize": true
+#     },
+#     "cwd": {
+#         "mode": "plain",
+#         "max_depth": 3
+#     }
+# }
+
 #  The default order & value for CLICOLOR
 export CLICOLOR=1
 export CLICOLOR_FORCE=1

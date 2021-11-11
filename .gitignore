@@ -138,7 +138,10 @@ ehthumbs.db
 .mrjob.conf
 .s3cfg
 .aws/
-
+.config
+.configs
+.creds
+.credentials
 
 # Logs and databases #
 ######################
